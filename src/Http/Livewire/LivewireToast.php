@@ -81,7 +81,7 @@ class LivewireToast extends Component
         $this->_setTransition();
         
         if (!empty($this->message)) {
-            $this->dispatchBrowserEvent('new-toast');
+            $this->emit('new-toast');
         }
         return view('livewire-toast::livewire.livewire-toast');
     }
